@@ -1,0 +1,13 @@
+.nav-item2{
+    display: flex;
+    flex-direction: row;
+    text-indent: 500px;
+    margin-right: 150px;
+
+}
+.nav-item3{
+    display: flex;
+    flex-direction: row;
+    white-space: 5;
+} 
+
