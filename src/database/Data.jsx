@@ -1,6 +1,6 @@
 
 let exampleBlogData = [
-    {
+    {id:0,
       author: "Wala Nour",
       title: "More custom template flexibility",
       content: 
@@ -14,7 +14,7 @@ let exampleBlogData = [
       country: "us",
       published_at: "2016-05-24T16:36:00-07:00",
     },
-    {
+    {id:1,
       author: "Dan Peck",
       title: "Hurricane Hanna makes landfall around 5 p.m. on Saturday.",
       content:
@@ -28,7 +28,7 @@ let exampleBlogData = [
       country: "us",
       published_at: "2020-07-26T01:04:23+00:00",
     },
-    {
+    {id:2,
       author: "TMZ Staff",
       title: "Nicki Minaj's Husband Gets Permission To Be There For Baby's Birth",
       content:
@@ -42,7 +42,7 @@ let exampleBlogData = [
       country: "us",
       published_at: "2020-08-01T05:34:47+00:00",
     },
-    {
+    {id:3,
       author: "Michael Rothstein",
       title: "New Lions safety Jayron Kearse suspended three games",
       content:
@@ -56,7 +56,7 @@ let exampleBlogData = [
       country: "us",
       published_at: "2020-07-31T23:23:14+00:00",
     },
-    {
+    {id:4,
       author: "Blogger",
       title: "New Lions safety Jayron Kearse suspended three games",
       content: 
