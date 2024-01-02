@@ -7,12 +7,20 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 export default function Create() {
   const [Jeu,setJeu]= useState(exampleBlogData)
+  const [filter,setFilter]= useState('')
+
   const ajout=(NewJeu)=>{
       const Update=[...Jeu,{...NewJeu,id:Jeu.length+1}]
       setJeu(Update)
   }
+  const handleFilter=(newFilter)=>{
+    setFilter(newFilter)
+  }
+  const filteredposts=Jeu.filter((jeu)=> 
+  jeu.author.toLowerCase().includes(filter.toLowerCase()))
   const nav=useNavigate()
   return (
+
     <div classname="allposts">
     <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
 <div class="container-fluid">
@@ -31,8 +39,8 @@ export default function Create() {
   
   <li class="nav-item3">
   <form class="d-flex" role="search">
-    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-    <button class="" type="submit">Search</button>
+    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"  onChange={(e)=>handleFilter(e.target.value)} />
+    <button class="" type="submit" >Search</button>
   </form>
   </li>
   
@@ -48,7 +56,7 @@ export default function Create() {
 </div>
 </nav>
 <div className="d-flex flex-row">
-{Jeu.map((player)=>(
+{filteredposts.map((player)=>(
         <div class="card mb-3"  style={{maxWidth: "540px"}}>
             
         <div class="row g-0">
